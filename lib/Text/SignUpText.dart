@@ -20,26 +20,12 @@ class TitleText extends StatelessWidget {
   }
 }
 
-class HintText extends StatelessWidget {
+class GrayText extends StatelessWidget {
   final String text;
+  final int hex;
+  final double fontSize;
 
-  HintText(this.text);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Text(
-        text,
-        style: TextStyle(fontSize: 16, color: Color.fromRGBO(209, 214, 219, 1)),
-      ),
-    );
-  }
-}
-
-class HaveAccountText extends StatelessWidget {
-  final String text;
-
-  HaveAccountText(this.text);
+  GrayText(this.text, this.hex, this.fontSize);
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +33,7 @@ class HaveAccountText extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Color.fromRGBO(152, 158, 177, 1)),
+            fontSize: fontSize, fontWeight: FontWeight.bold, color: Color(hex)),
       ),
     );
   }
