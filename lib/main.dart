@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
             child: Column(
               children: [
                 TitleText("Password", 14),
-                GrayText("Your password\n", 0xffd1d6db, 16),
+                HintText("Your password\n"),
                 Row(
                   children: [
                     GrayText("Have an account?   ", 0xff989EB1, 16),
